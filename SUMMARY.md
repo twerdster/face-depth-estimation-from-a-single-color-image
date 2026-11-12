@@ -1,21 +1,25 @@
-# Historical student-project archive
+# face-depth-estimation-from-a-single-color-image: maintenance context
 
-## Current source state — 2026-11-12
+Read this file first, then SKILL.md and README.md. This context describes the repository as of 2026-11-12.
 
-**Partial MATLAB research source recovered.** The three original files are in [`source/original/`](source/original/): `Test2nd.m`, `buildDiff.m` and `getDiff.m`. They are research snapshots rather than a complete final application, trained model or dataset.
+## Purpose and current source
 
-All three published MATLAB files preserve the recovered attachment bytes. Raw correspondence, generic face-image archives and unrelated/unverified datasets were not published.
+Historical title/aim: estimating face depth from a color image. The archived project description identifies random-forest facial-region classification on paired mannequin color/depth images; buildDiff.m assembles labeled depth features and trains TreeBagger. Updated code assembles depth-difference patches and labels only.
 
-## Setup and validation
+Test2nd.m, buildDiff.m and getDiff.m retain recovered bytes. Calibration, image/depth data, model files and the getDepthFeatures MEX helper are absent. The Python port does not estimate depth from a color image or train TreeBagger.
 
-The files use MATLAB image-processing, camera-calibration and random-forest routines (`TreeBagger`/`predict`). Referenced calibration, classifier, feature, image and depth files are absent. No MATLAB/Octave run or successful end-to-end build is claimed. Supply appropriately licensed data and review all paths and file outputs before attempting these historical scripts.
+## Use and validation
 
-Publication validation covers the source allowlist, SHA-256 provenance, text/XML or project metadata where applicable, and credential/private-material scanning. It is not an end-to-end runtime result. Read README.md and source/PROVENANCE.json before further edits; preserve source/original and existing documents. Any future updated implementation belongs in updated/ with its own requirements, tests, attribution and a clear description of its differences. Do not introduce a blanket license. Review this context file before committing; keep actual validation and source counts accurate.
+From repository root: python3 -m unittest discover -s updated/tests -v. See updated/README.md for nested-list API and Jupyter/Colab setup.
 
-## Interactive possibilities
+updated/VALIDATION.json records 18 unit tests and three real notebook code cells passed on 2026-11-12, macOS arm64 / Python 3.14.4. These check synthetic layout/order/boundary/NaN/radius fixtures, not MATLAB runtime parity or recognition accuracy.
 
-The difference-feature calculation is a small candidate for a tested Python notebook with synthetic inputs. Reproducing the face-depth experiment requires its missing data, calibration and learned model.
+MATLAB/Octave and Linux execution are unrecorded. The 502-frame training loop and MATLAB random probe shuffle are not ported. Default patches are stacked vertically (21 rows of 35 values per selected pixel); labels repeat per patch row.
 
-## Updated component — 2026-11-12
+## Documentation maintenance
 
-Feature assembly from Tova Krakauer's recovered MATLAB research source. Python standard-library code and 18 mathematical/edge tests live in updated/. The notebook updated/notebooks/depth-features.ipynb runs on synthetic data; it is not the complete historical application. A project-local Jupyter environment on macOS/Python 3.14 executed the notebook; the private executed copy remains outside this repo and public notebooks have clear outputs. No MATLAB/Octave run or classifier/pipeline reproduction is claimed. Original source hashes and attribution remain unchanged. The top README figure is an exact copy of the archived website image; three badges describe original MATLAB, updated Python and partial archive status. Claude drafted helpers/tests; Codex reviewed/completed the update after Claude's quota limit. See updated/README.md and updated/VALIDATION.json. SUMMARY.md was reviewed/updated before commit; SKILL.md is absent.
+The 2026-11-12 documentation revision organizes the README around implementation, available source, setup, recorded checks and limits. It preserves historical visuals and links, with captions separating historical results from updated examples. No runnable code, source provenance, pinned revisions, licenses or validation results changed in this revision. Recorded earlier tests were not rerun for the prose-only edits.
+
+Preserve original source and authorship. New ports belong under updated/ and require their own scope/validation. Do not infer a blanket license from recovery. Review this file and SKILL.md before every commit and synchronize changes to workflow, commands, validation or status. Check relative links and figure rendering; never describe inventory counts or component tests as full-application validation.
+
+Two actual Claude editorial review rounds on 2026-11-12 covered the README and related changed documentation, including context files, component guides and applicable algorithm/build notes or schematic text. Useful qualifications were checked against source, preserved project records and saved validation logs, then applied. Editorial review adds no runtime coverage.

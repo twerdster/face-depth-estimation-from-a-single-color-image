@@ -4,39 +4,38 @@
 
 ![MATLAB original](https://img.shields.io/badge/Original-MATLAB-0076A8) ![Python update](https://img.shields.io/badge/Updated-Python_3-3776AB) ![Partial archive](https://img.shields.io/badge/Archive-partial-6c757d)
 
-A random decision forest trained on paired color and depth images of a painted mannequin face to recognize facial regions.
+The historical project title describes the aim of estimating face depth from a color image. The [archived project description](https://twerdster.github.io/#face-depth-estimation-from-a-single-color-image) describes random-forest facial-region classification using paired color/depth images of a painted mannequin face; the recovered `buildDiff.m` assembles labeled depth-difference features and trains a `TreeBagger` classifier. The repository preserves three MATLAB research scripts and an updated Python implementation of their depth-difference feature assembly. It does not include a trained classifier or a complete color-to-depth system.
 
-Students: Tova Krakauer.
+Student: Tova Krakauer. Supervision: Aaron Wetzler.
 
-Supervision: Aaron Wetzler.
+*The figure is unchanged imagery from the archived project page, not output from the Python component.*
 
-## Status
+## What is available
 
-**Partial MATLAB research source recovered.** The three original files are in [`source/original/`](source/original/): `Test2nd.m`, `buildDiff.m` and `getDiff.m`. They are research snapshots rather than a complete final application, trained model or dataset.
+[Original MATLAB source](source/original/) contains `Test2nd.m`, `buildDiff.m` and `getDiff.m`. Their recovered bytes are unchanged; [source provenance](source/PROVENANCE.json) records the hashes. The scripts reference image/depth data, calibration, features and classifiers that are absent.
 
-## Running
+The [updated helper](updated/face_depth_features.py) takes depth images and matching label maps as nested Python lists. For each nonzero depth pixel it builds a 21-by-35 neighborhood of depth differences, stacks those patches vertically, and repeats the center label for each patch row. It also implements the deterministic probe-radius formula from `Test2nd.m`. It does not train `TreeBagger`, predict regions or estimate depth from a new color image.
 
-The files use MATLAB image-processing, camera-calibration and random-forest routines (`TreeBagger`/`predict`). Referenced calibration, classifier, feature, image and depth files are absent. No MATLAB/Octave run or successful end-to-end build is claimed. Supply appropriately licensed data and review all paths and file outputs before attempting these historical scripts.
+## Use the Python component
 
-## Original code
+Python 3.10 or newer is required; the helper uses only the standard library. Run from the repository root:
 
-All three published MATLAB files preserve the recovered attachment bytes. Raw correspondence, generic face-image archives and unrelated/unverified datasets were not published.
+```sh
+python3 -m unittest discover -s updated/tests -v
+```
 
-The [source provenance manifest](source/PROVENANCE.json) records the published paths, hashes and any redactions. Original student/third-party notices remain in place. No blanket license is assigned to recovered work. Future ports belong in `updated/` and must be described and tested as updated implementations.
+[Open the notebook](updated/notebooks/depth-features.ipynb) locally with Jupyter/IPython or [in Colab](https://colab.research.google.com/github/twerdster/face-depth-estimation-from-a-single-color-image/blob/main/updated/notebooks/depth-features.ipynb). It uses procedural arrays without a model or dataset. In Colab, its setup cell downloads the Python helper from this repository at runtime. The [component guide](updated/README.md) explains input indexing, output layout and the notebook's Colab helper download.
 
-## Updated component and notebook
+## Validation and limitations
 
-Feature assembly from Tova Krakauer's recovered MATLAB research source. The reviewed Python update is in [updated/](updated/); it preserves the historical source above and documents deliberate behavior changes. This component is not the complete application.
+The [2026-11-12 execution record](updated/VALIDATION.json) reports 18 component unit tests and three notebook code cells executed on macOS arm64 with Python 3.14.4. The tests check synthetic fixtures, patch/label layout, column-major traversal, boundary behavior, NaN handling and the radius formula. They are component tests, not classifier training, recognition accuracy or a face-depth benchmark.
 
-[Run the notebook](updated/notebooks/depth-features.ipynb) · [Open in Colab](https://colab.research.google.com/github/twerdster/face-depth-estimation-from-a-single-color-image/blob/main/updated/notebooks/depth-features.ipynb)
+MATLAB/Octave was unavailable, so there is no cross-runtime numerical comparison. The historical scripts require MATLAB image-processing, camera-calibration and `TreeBagger`/`predict` routines, plus missing calibration, data, learned-model files and the `getDepthFeatures` MEX helper. They contain fixed paths and file writes that must be reviewed before use. The Python helper does not reproduce the 502-frame training loop or MATLAB random probe shuffle. Linux execution has not been recorded.
 
-Validation: 18 unit tests and an executed Jupyter notebook on macOS/Python 3.14. No original MATLAB runtime was available. See [the execution record](updated/VALIDATION.json). The helper was drafted with Claude Code and completed/reviewed with Codex for Aaron Wetzler.
+## Original code and updated work
+
+The helper and initial tests were drafted with Claude Code and reviewed/completed with Codex for Aaron Wetzler in 2026. This is a component port with added input checks. Original student and third-party notices remain unchanged; no blanket license is assigned. Authors can open an issue to contribute changes, correct attribution or request removal.
 
 ## Links
 
 - [Project entry on Aaron Wetzler's website](https://twerdster.github.io/#face-depth-estimation-from-a-single-color-image)
-
-## Attribution and Updates
-
-Original student and third-party attribution will be retained. No new license for original source code is implied by this README. Original authors can open an issue to contribute updates or request corrections or removal of their material.
-
