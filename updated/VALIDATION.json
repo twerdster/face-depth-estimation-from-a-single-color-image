@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "runtime": {
+    "python": "3.14.4",
+    "system": "Darwin",
+    "machine": "arm64"
+  },
+  "unit_tests": {
+    "command": "python3 -m unittest discover -s updated/tests -v",
+    "passed": 18,
+    "failures": 0
+  },
+  "notebook": {
+    "path": "notebooks/depth-features.ipynb",
+    "executed": true,
+    "code_cells": 3,
+    "inputs": "procedural synthetic data only",
+    "checked_in_outputs": "cleared"
+  },
+  "scope": "Component port only; original MATLAB runtime unavailable; no full application/model/recognition-accuracy validation.",
+  "implementation": "Initial helpers and tests drafted with Claude Code; reviewed and completed with Codex for Aaron Wetzler."
+}

@@ -1,5 +1,9 @@
 # Face Depth Estimation from a Single Color Image
 
+![Original archived project figure](assets/project.jpg)
+
+![MATLAB original](https://img.shields.io/badge/Original-MATLAB-0076A8) ![Python update](https://img.shields.io/badge/Updated-Python_3-3776AB) ![Partial archive](https://img.shields.io/badge/Archive-partial-6c757d)
+
 A random decision forest trained on paired color and depth images of a painted mannequin face to recognize facial regions.
 
 Students: Tova Krakauer.
@@ -19,6 +23,14 @@ The files use MATLAB image-processing, camera-calibration and random-forest rout
 All three published MATLAB files preserve the recovered attachment bytes. Raw correspondence, generic face-image archives and unrelated/unverified datasets were not published.
 
 The [source provenance manifest](source/PROVENANCE.json) records the published paths, hashes and any redactions. Original student/third-party notices remain in place. No blanket license is assigned to recovered work. Future ports belong in `updated/` and must be described and tested as updated implementations.
+
+## Updated component and notebook
+
+Feature assembly from Tova Krakauer's recovered MATLAB research source. The reviewed Python update is in [updated/](updated/); it preserves the historical source above and documents deliberate behavior changes. This component is not the complete application.
+
+[Run the notebook](updated/notebooks/depth-features.ipynb) · [Open in Colab](https://colab.research.google.com/github/twerdster/face-depth-estimation-from-a-single-color-image/blob/main/updated/notebooks/depth-features.ipynb)
+
+Validation: 18 unit tests and an executed Jupyter notebook on macOS/Python 3.14. No original MATLAB runtime was available. See [the execution record](updated/VALIDATION.json). The helper was drafted with Claude Code and completed/reviewed with Codex for Aaron Wetzler.
 
 ## Links
 

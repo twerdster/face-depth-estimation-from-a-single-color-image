@@ -15,3 +15,7 @@ Publication validation covers the source allowlist, SHA-256 provenance, text/XML
 ## Interactive possibilities
 
 The difference-feature calculation is a small candidate for a tested Python notebook with synthetic inputs. Reproducing the face-depth experiment requires its missing data, calibration and learned model.
+
+## Updated component — 2026-11-12
+
+Feature assembly from Tova Krakauer's recovered MATLAB research source. Python standard-library code and 18 mathematical/edge tests live in updated/. The notebook updated/notebooks/depth-features.ipynb runs on synthetic data; it is not the complete historical application. A project-local Jupyter environment on macOS/Python 3.14 executed the notebook; the private executed copy remains outside this repo and public notebooks have clear outputs. No MATLAB/Octave run or classifier/pipeline reproduction is claimed. Original source hashes and attribution remain unchanged. The top README figure is an exact copy of the archived website image; three badges describe original MATLAB, updated Python and partial archive status. Claude drafted helpers/tests; Codex reviewed/completed the update after Claude's quota limit. See updated/README.md and updated/VALIDATION.json. SUMMARY.md was reviewed/updated before commit; SKILL.md is absent.
