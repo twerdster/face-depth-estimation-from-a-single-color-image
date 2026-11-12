@@ -1,0 +1,30 @@
+{
+  "recovery_date": "2026-11-12",
+  "note": "Historical source recovery, not a license grant or successful modern build. Original bytes are preserved except explicitly recorded security/privacy edits.",
+  "files": [
+    {
+      "path": "source/original/Test2nd.m",
+      "origin": "Original MATLAB research attachment",
+      "original_sha256": "950377d387287dcb44b331289b9f47e5bab6679340521e23fc6921bb70de082a",
+      "published_sha256": "950377d387287dcb44b331289b9f47e5bab6679340521e23fc6921bb70de082a",
+      "bytes": 7780,
+      "changes": []
+    },
+    {
+      "path": "source/original/buildDiff.m",
+      "origin": "Original MATLAB research attachment",
+      "original_sha256": "d5cbadd104f9d86bf3f682dc87a98ce6ed2cddd9f7d5c5e3801c0ffe176f2909",
+      "published_sha256": "d5cbadd104f9d86bf3f682dc87a98ce6ed2cddd9f7d5c5e3801c0ffe176f2909",
+      "bytes": 383,
+      "changes": []
+    },
+    {
+      "path": "source/original/getDiff.m",
+      "origin": "Original MATLAB research attachment",
+      "original_sha256": "ec0cfd65243fa0047ed770dc44df4fef330336d8165c9296078e89b71402c899",
+      "published_sha256": "ec0cfd65243fa0047ed770dc44df4fef330336d8165c9296078e89b71402c899",
+      "bytes": 766,
+      "changes": []
+    }
+  ]
+}

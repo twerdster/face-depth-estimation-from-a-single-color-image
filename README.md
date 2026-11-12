@@ -8,11 +8,17 @@ Supervision: Aaron Wetzler.
 
 ## Status
 
-**Coming soon.** This repository is being prepared as a historical student-project archive. Original source code, project documents and build instructions will be added as they are recovered and reviewed. It is not yet a runnable release.
+**Partial MATLAB research source recovered.** The three original files are in [`source/original/`](source/original/): `Test2nd.m`, `buildDiff.m` and `getDiff.m`. They are research snapshots rather than a complete final application, trained model or dataset.
 
 ## Running
 
-No runnable source has been published in this repository yet. Platform requirements and setup instructions will be recorded from the original project files rather than guessed.
+The files use MATLAB image-processing, camera-calibration and random-forest routines (`TreeBagger`/`predict`). Referenced calibration, classifier, feature, image and depth files are absent. No MATLAB/Octave run or successful end-to-end build is claimed. Supply appropriately licensed data and review all paths and file outputs before attempting these historical scripts.
+
+## Original code
+
+All three published MATLAB files preserve the recovered attachment bytes. Raw correspondence, generic face-image archives and unrelated/unverified datasets were not published.
+
+The [source provenance manifest](source/PROVENANCE.json) records the published paths, hashes and any redactions. Original student/third-party notices remain in place. No blanket license is assigned to recovered work. Future ports belong in `updated/` and must be described and tested as updated implementations.
 
 ## Links
 
@@ -20,5 +26,5 @@ No runnable source has been published in this repository yet. Platform requireme
 
 ## Attribution and Updates
 
-Original student and third-party attribution will be retained. No license for unrecovered source code is implied by this README. Original authors can open an issue to contribute updates or request corrections or removal of their material.
+Original student and third-party attribution will be retained. No new license for original source code is implied by this README. Original authors can open an issue to contribute updates or request corrections or removal of their material.
 
