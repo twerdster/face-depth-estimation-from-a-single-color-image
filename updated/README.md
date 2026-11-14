@@ -1,5 +1,9 @@
 # Depth-difference features (updated Python component)
 
+## Updated and ported for modern hardware
+
+This Python 3 component ports depth-difference feature assembly and the deterministic probe-radius formula from the recovered MATLAB scripts, adding input checks, component tests and a notebook. It does not train the classifier or estimate depth from a color image. The recorded checks cover synthetic examples on macOS; MATLAB parity and Linux execution are unrecorded.
+
 This component translates feature assembly from the recovered project scripts `getDiff.m` and `buildDiff.m`, plus the deterministic probe-radius formula in `Test2nd.m`. It accepts depth/label arrays and returns numerical features and labels. It does not infer depth from a color image, train a classifier or restore the historical face-depth experiment.
 
 ## Setup and use

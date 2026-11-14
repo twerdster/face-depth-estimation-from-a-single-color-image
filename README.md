@@ -1,5 +1,9 @@
 # Face Depth Estimation from a Single Color Image
 
+[![New!](updated/assets/new-badge.svg)](updated/README.md#updated-and-ported-for-modern-hardware) [Updated and ported for modern hardware](updated/README.md#updated-and-ported-for-modern-hardware)
+
+*Historical project reference follows. Current builds and results are in the updated section above.*
+
 ![Original archived project figure](assets/project.jpg)
 
 ![MATLAB original](https://img.shields.io/badge/Original-MATLAB-0076A8) ![Python update](https://img.shields.io/badge/Updated-Python_3-3776AB) ![Partial archive](https://img.shields.io/badge/Archive-partial-6c757d)

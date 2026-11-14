@@ -2,6 +2,12 @@
 
 Read this file first, then SKILL.md and README.md. This context describes the repository as of 2026-11-12.
 
+## Updated-work navigation (2026-11-14)
+
+Aaron authorized a top-of-page `New!` badge and “Updated and ported for modern hardware” link in the root README. Both lead to the corresponding heading in `updated/README.md`, which now opens with a brief description of the actual port, repairs or reimplementation and its limits. An italic line marks the following content as the historical reference. The historical root reference body remains unchanged; current implementation details stay under `updated/`.
+
+This documentation change does not alter source, submodule pins, media or recorded validation. Earlier root-README byte-identity statements and hashes apply to their recorded baseline; current preservation checks remove only the authorized navigation block before comparing the historical body.
+
 ## Purpose and current source
 
 Historical title/aim: estimating face depth from a color image. The archived project description identifies random-forest facial-region classification on paired mannequin color/depth images; buildDiff.m assembles labeled depth features and trains TreeBagger. Updated code assembles depth-difference patches and labels only.
